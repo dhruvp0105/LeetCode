@@ -7,7 +7,7 @@ public:
         vector<int> v;
         
         for(int i=0;i<nums.size();i++){
-            if((map.find(target-nums[i])) != map.end()){  //if the element is founf before the end og map
+            if((map.find(target-nums[i])) != map.end()){  //if the element is found before the end of map
                 v.push_back(i);
                 v.push_back(map[target-nums[i]]);
                 return v;
