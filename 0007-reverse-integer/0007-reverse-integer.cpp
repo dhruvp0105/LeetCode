@@ -7,21 +7,16 @@ public:
         
         if(x < 0){
             sign = -1;
-            x = -1ll*x;
+            x = -1ll*x;   //if x = -2147483648 then x != 2147483648. x value ramain same. 
         }
         
         while(x != 0){
             int rem = x % 10;
             rev = rev*10 + rem;
-            
-            cout<<rev<<" ";
             x /= 10;
         }
-        cout<<INT_MAX<<rev<<endl;
+        
         if(rev > INT_MAX || rev<INT_MIN){
-            return 0;
-        }
-        if(rev >= INT_MAX-1 && sign == -1){
             return 0;
         }
         
