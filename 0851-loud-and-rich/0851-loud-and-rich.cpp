@@ -13,8 +13,9 @@ public:
         vector<int> ans(n);
         for(int i=0;i<n;i++)
         {
-            if(indeg[i] == 0)
-            q.push(i);
+            if(indeg[i] == 0){
+                q.push(i);
+            }
             ans[i]=i;
         }
         while(!q.empty())
